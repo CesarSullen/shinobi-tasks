@@ -1,0 +1,248 @@
+// Define Sass variables
+$primary: #f04800;
+$light: #eee;
+$dark: #313154;
+$danger: #f41a16;
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+$primary-glow: 0px 0px 15px $primary;
+$danger-glow: 0px 0px 10px $danger;
+
+// Replace CSS variables with Sass variables
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif, Impact, Haettenschweiler, "Arial Narrow Bold";
+	transition: 0.2s ease-in-out;
+}
+input {
+	border: none;
+	outline: none;
+	background: none;
+}
+body {
+	background: $light;
+	color: $dark;
+}
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+h4 {
+	color: $dark;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+.title {
+	display: flex;
+	gap: 5px;
+
+	&,
+	input {
+		// Use nesting for title and title input styles.
+		color: $dark;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+}
+.narutoImg {
+	width: 10rem;
+	float: left;
+	cursor: pointer;
+}
+.createTodo {
+	h4:first-child {
+		// Use nesting for createTodo h4 styles.
+		font-size: 1.5rem;
+		margin-top: 3rem;
+	}
+	input[type="text"] {
+		// Use nesting for createTodo input styles.
+		display: block;
+		width: 100%;
+		font-size: 1.125rem;
+		padding: 1rem 1.5rem;
+		color: $dark;
+		background-color: #fff; // This should be replaced with a variable.
+		border-radius: 0.5rem;
+		box-shadow: $shadow;
+		margin-bottom: 1.5rem;
+	}
+	.options {
+		// Use nesting for createTodo options styles.
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+}
+.bubbleBusiness,
+.bubblePersonal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background-color: #fff; // This should be replaced with a variable.
+	border-radius: 0.5rem;
+	box-shadow: $shadow;
+	cursor: pointer;
+	color: $dark;
+	font-size: 1.125rem;
+}
+.bubbleBusiness.selected,
+.bubblePersonal.selected {
+	background-color: $primary; 
+	color: $light;
+}
+.bubbleBusiness:hover,
+.bubblePersonal:hover {
+	box-shadow: $primary-glow; // Use nesting for hover styles.
+}
+.check {
+	display: flex; // Use nesting for check styles.
+	align-items: center; // Use nesting for check styles.
+	justify-content: center; // Use nesting for check styles.
+	width: 20px; // Use nesting for check styles.
+	height: 20px; // Use nesting for check styles.
+	border-radius: 50%; // Use nesting for check styles.
+	border: 2px solid $primary; // Use nesting for check styles.
+	box-shadow: $primary-glow; // Use nesting for check styles.
+}
+.check::after {
+	content: ""; // Use nesting for check::after styles.
+	display: block; // Use nesting for check::after styles.
+	opacity: 0; // Use nesting for check::after styles.
+	width: 0px; // Use nesting for check::after styles.
+	height: 0px; // Use nesting for check::after styles.
+	background-color: $primary; // Use nesting for check::after styles.
+	box-shadow: $primary-glow; // Use nesting for check::after styles.
+	border-radius: 50%; // Use nesting for check::after styles.
+	
+}
+input:checked ~ .check::after {
+	width: 10px; // Use nesting for input:checked ~ .check::after styles.
+	height: 10px; // Use nesting for input:checked ~ .check::after styles.
+	opacity: 1; // Use nesting for input:checked ~ .check::after styles.
+}
+.createTodo input[type="submit"] {
+	display: block; // Use nesting for createTodo input[type="submit"] styles.
+	width: 100%; // Use nesting for createTodo input[type="submit"] styles.
+	font-size: 1.125rem; // Use nesting for createTodo input[type="submit"] styles.
+	padding: 1rem 1.5rem; // Use nesting for createTodo input[type="submit"] styles.
+	color: #fff; // This should be replaced with a variable.
+	background-color: $primary; // Use nesting for createTodo input[type="submit"] styles.
+	border-radius: 0.5rem; // Use nesting for createTodo input[type="submit"] styles.
+	box-shadow: $primary-glow; // Use nesting for createTodo input[type="submit"] styles.
+	cursor: pointer; // Use nesting for createTodo input[type="submit"] styles.
+	
+}
+.createTodo input[type="submit"]:hover {
+	opacity: 75%; // Use nesting for createTodo input[type="submit"]:hover styles.
+}
+.todoItem {
+	display: flex;
+	align-items: center;
+	background-color: #fff; // This should be replaced with a variable.
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: $shadow;
+	margin-bottom: 1rem;
+
+	label {
+		// Use nesting for todoItem label styles.
+		display: block;
+		margin-right: 1rem;
+		cursor: pointer;
+
+		.todoContent {
+			// Use nesting for todoItem todoContent styles.
+			flex: 1 1 0%;
+
+			input {
+				// Use nesting for todoItem todoContent input styles.
+				color: $dark;
+				font-size: 1.125rem;
+				width: 90%;
+			}
+		}
+		.actions {
+			// Use nesting for todoItem actions styles.
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+// Replace CSS variables with Sass variables
+.todoItem {
+	.actions {
+		// Use nesting for todoItem actions styles.
+		button {
+			// Use nesting for todoItem actions button styles.
+			display: block;
+			padding: 0.5rem;
+			border-radius: 0.25rem;
+			color: #fff; // This should be replaced with a variable.
+			cursor: pointer;
+			
+		}
+		.edit {
+			// Use nesting for todoItem actions edit styles.
+			margin-right: 0.5rem;
+			background-color: $primary;
+		}
+		.delete {
+			// Use nesting for todoItem actions delete styles.
+			background-color: $danger;
+			border: none;
+		}
+		.delete:hover {
+			// Use nesting for todoItem actions delete:hover styles.
+			box-shadow: $danger-glow;
+		}
+	}
+}
+.todoItem.done {
+	.todoContent {
+		// Use nesting for todoItem.done todoContent styles.
+		input {
+			// Use nesting for todoItem.done todoContent input styles.
+			text-decoration: line-through;
+			color: grey; // This should be defined as a variable or replaced with a color value.
+		}
+		input[type="checkbox"] {
+			// Use nesting for todoItem.done todoContent input[type="checkbox"] styles.
+			display: none;
+		}
+	}
+}
+input[type="checkbox"] {
+	display: none;
+}
+input[type="radio"] {
+	display: none;
+}
+@media screen and (min-width: 600px) {
+	.interactiveContent {
+		// Use media query and nesting for interactiveContent styles.
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: -40px;
+	}
+	.createTodo {
+		// Use media query and nesting for createTodo styles.
+		margin-top: 0px;
+	}
+	h4 {
+		// Use media query and nesting for h4 styles.
+		font-size: 1.5rem;
+	}
+	.narutoImg {
+		// Use media query and nesting for narutoImg styles.
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+	}
+}
