@@ -1,0 +1,27 @@
+// colors
+$primary: #f04800;
+$secondary: #fff;
+$dark: #313154;
+$danger: #f41a16;
+
+// glow colors
+$primary-glow: 0px 0px 15px $primary;
+$danger-glow: 0px 0px 10px $danger;
+
+// base data
+$base-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+$base-border-radius: 6px;
+$base-padding: 1.5rem;
+
+// margin
+$base-margin-top: 2rem;
+$base-margin-top-lg: $base-margin-top + 1;
+
+$base-margin-bottom: 2rem;
+$margin-bottom-sm: $base-margin-bottom - 0.5;
+$margin-bottom-xs: $base-margin-bottom - 1rem;
+
+// font size
+$base-font-size: 1.125rem;
+$font-size-sm: $base-font-size - 0.325;
+$font-size-lg: $base-font-size + 0.375;

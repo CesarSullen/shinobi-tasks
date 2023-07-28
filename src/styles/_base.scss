@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif, Impact, Haettenschweiler, "Arial Narrow Bold";
+	transition: 0.2s ease-in-out;
+}
+input {
+	border: none;
+	outline: none;
+	background: none;
+}
+body {
+	background-color: $dark;
+}
+section {
+	margin-top: $base-margin-top;
+	margin-bottom: $base-margin-bottom;
+	padding-left: $base-padding;
+	padding-right: $base-padding;
+}
+h4 {
+	color: $secondary;
+	font-size: 1rem;
+	margin-bottom: $margin-bottom-xs;
+	text-align: center;
+}
+.title {
+	@include display-setting(flex);
+	color: $secondary;
+	justify-content: left;
+	gap: 5px;
+
+	input {
+		color: $secondary;
+		font-size: $font-size-lg;
+		font-weight: 700;
+	}
+}
+.narutoImg {
+	width: 10rem;
+	float: left;
+	cursor: pointer;
+}
+input[type="checkbox"] {
+	display: none;
+}
+input[type="radio"] {
+	display: none;
+}

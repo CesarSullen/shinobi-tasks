@@ -1,0 +1,17 @@
+.create-todo {
+	h4:first-child {
+		font-size: $font-size-lg;
+		margin-top: $base-margin-top-lg;
+	}
+	input[type="text"] {
+		background-color: $secondary;
+		color: $dark;
+		display: block;
+		width: 100%;
+		font-size: $base-font-size;
+		padding: ($base-padding - 0.5) $base-padding;
+		border-radius: $base-border-radius;
+		box-shadow: $base-box-shadow;
+		margin-bottom: $margin-bottom-sm;
+	}
+}

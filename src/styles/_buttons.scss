@@ -1,0 +1,61 @@
+.create-todo {
+	.options {
+		@include display-setting(grid);
+		gap: 1rem;
+		margin-bottom: $margin-bottom-sm;
+	}
+
+	.bubbleBusiness,
+	.bubblePersonal {
+		@include display-setting(flex, column);
+		background-color: $secondary;
+		color: $dark;
+		padding: $base-padding;
+		border-radius: $base-border-radius;
+		box-shadow: $base-box-shadow;
+		font-size: $base-font-size;
+		cursor: pointer;
+
+		&.selected {
+			background-color: $primary;
+			color: $secondary;
+		}
+
+		&:hover {
+			box-shadow: $primary-glow;
+		}
+	}
+
+	input[type="submit"] {
+		background-color: $primary;
+		color: $secondary;
+		display: block;
+		width: 100%;
+		font-size: $base-font-size;
+		padding: ($base-padding - 0.5) $base-padding;
+		border-radius: $base-border-radius;
+		box-shadow: $primary-glow;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 75%;
+		}
+	}
+}
+
+.todo-list {
+	.todo-item {
+		.delete {
+			background-color: $danger;
+			color: $secondary;
+			border: none;
+			border-radius: $base-border-radius - 2;
+			padding: $base-padding - 1;
+			cursor: pointer;
+
+			&:hover {
+				box-shadow: $danger-glow;
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.todo-list {
+	.check {
+		@include display-setting(flex);
+		width: 20px;
+		height: 20px;
+		border: 2px solid $primary;
+		border-radius: 50%;
+		box-shadow: $primary-glow;
+
+		&::after {
+			content: "";
+			display: block;
+			background-color: $primary;
+			box-shadow: $primary-glow;
+			border-radius: 50%;
+		}
+	}
+	input:checked ~ .check::after {
+		width: 10px;
+		height: 10px;
+	}
+
+	.todo-item {
+		@include display-setting(flex);
+		background-color: $secondary;
+		gap: 0.5em;
+		padding: $base-padding - 0.5;
+		border-radius: 8px;
+		box-shadow: $base-box-shadow;
+		margin-bottom: $margin-bottom-xs;
+
+		label {
+			display: block;
+			margin-right: 1rem;
+			cursor: pointer;
+		}
+
+		input[type="text"] {
+			color: $dark;
+			font-size: $base-font-size;
+			width: 90%;
+		}
+
+		.selectedCategory {
+			padding: 0.15em 0.3em;
+			font-size: $font-size-sm;
+			font-weight: bold;
+			font-variant: small-caps;
+			border-style: solid;
+			border-radius: $base-border-radius * 5;
+			border-width: 2px;
+			opacity: 50%;
+		}
+
+		&.done {
+			input {
+				text-decoration: line-through;
+				color: gray;
+			}
+		}
+	}
+}

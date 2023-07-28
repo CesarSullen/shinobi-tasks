@@ -1,0 +1,10 @@
+@mixin display-setting($display, $flex: none) {
+	display: $display;
+	@if ($display == grid) {
+		grid-template-columns: repeat(2, 1fr);
+	} @else {
+		flex-direction: #{$flex};
+		align-items: center;
+		justify-content: center;
+	}
+}
